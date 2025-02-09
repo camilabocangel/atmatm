@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "77862396230",
+    "project_id": "holi-6c253",
+    "storage_bucket": "holi-6c253.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77862396230:android:587c57496b7388e92ec547",
+        "android_client_info": {
+          "package_name": "com.example.atmatm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCynPYTcPyrvxuomBCgdOd2QCJ42tkJDEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
