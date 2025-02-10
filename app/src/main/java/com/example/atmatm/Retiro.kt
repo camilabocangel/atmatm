@@ -13,6 +13,8 @@ class Retiro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRetiroBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         binding.siguienteRetiro.setOnClickListener {
             val intentHome = Intent (this, Home::class.java)
             startActivity(intentHome)

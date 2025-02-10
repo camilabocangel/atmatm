@@ -14,6 +14,8 @@ class Deposito : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityDepositoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
         binding.siguienteDeposito.setOnClickListener {
             val intentHome = Intent (this, Home::class.java)

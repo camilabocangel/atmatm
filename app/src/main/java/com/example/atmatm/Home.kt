@@ -13,6 +13,8 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
         binding.depositoCard.setOnClickListener {
             val intentDeposito = Intent (this, Deposito::class.java)
