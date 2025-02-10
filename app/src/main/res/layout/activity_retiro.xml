@@ -150,7 +150,7 @@
             android:inputType="number">
         </EditText>
         <Button
-            android:id="@+id/botonLogin"
+            android:id="@+id/siguienteRetiro"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/celeste"
