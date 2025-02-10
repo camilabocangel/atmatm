@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ATMATM</string>
+    <string name="holaLOGIN">HOLA!</string>
+    <string name="bienvenidoLOGIN">BIENVENIDO</string>
+    <string name="emailLOGIN">Email</string>
+    <string name="contrasenaLOGIN">Contraseña</string>
+    <string name="botonLOGIN">LOGIN</string>\
+    <string name="noCuentaLOGIN">¿No tienes cuenta?</string>
+    <string name="crearCuentaLOGIN">Crear cuenta</string>
 </resources>
