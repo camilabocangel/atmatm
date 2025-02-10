@@ -18,5 +18,9 @@ class Login : AppCompatActivity() {
             val intentHome = Intent (this, Home::class.java)
             startActivity(intentHome)
         }
+        binding.crearCuenta.setOnClickListener{
+            val intentRegistro = Intent (this, Registro::class.java)
+            startActivity(intentRegistro)
+        }
     }
 }
