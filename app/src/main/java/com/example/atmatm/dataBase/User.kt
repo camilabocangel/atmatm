@@ -9,5 +9,6 @@ data class User(
     val id: Int = 0,
     var nombre: String,
     var password: String? = null,
-    var saldo: Double = 0.0
+    var saldo: Double = 0.0,
+    var lastUser: Boolean
 )
