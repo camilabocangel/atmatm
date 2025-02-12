@@ -17,4 +17,12 @@
     <string name="cu_nto_desea_depositar_en_su_cuenta">¿Cuánto desea depositar en su cuenta?</string>
     <string name="cu_nto_desea_retirar_en_su_cuenta">¿Cuánto dinero desea retirar?</string>
     <string name="monto">Monto:</string>
+    <string name="continuar">Continuar</string>
+    <string name="hola">Hola</string>
+    <string name="imagen_de_dinero">Imagen de dinero</string>
+    <string name="saldo_actual">Saldo actual:</string>
+    <string name="_00_00">00.00</string>
+    <string name="qu_desea_realizar">¿Qué desea realizar?</string>
+    <string name="deposito">DEPOSITO</string>
+    <string name="retiro">RETIRO</string>
 </resources>
