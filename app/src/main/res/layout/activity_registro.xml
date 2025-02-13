@@ -6,94 +6,114 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registro">
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/registro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/registro">
+        android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/crearCuentaRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:text="CREA TU CUENTA"
             android:textSize="40sp"
-            app:layout_constraintTop_toTopOf="@id/registro"
-            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="@id/registro"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintEnd_toEndOf="@id/registro">
-        </TextView>
+            app:layout_constraintTop_toTopOf="@id/registro"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/crearCuentaRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="80dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="80dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/crearCuentaRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/emailLOGIN"
-                android:inputType="textEmailAddress">
+                android:inputType="textEmailAddress"
+                android:text="@string/emailLOGIN">
+
             </com.google.android.material.textfield.TextInputEditText>
+
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenaRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/emailRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/emailRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/contrasenaLOGIN"
-                android:inputType="numberPassword">
+                android:inputType="numberPassword"
+                android:text="@string/contrasenaLOGIN">
             </com.google.android.material.textfield.TextInputEditText>
+
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirmarContrasenaRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/contrasenaRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/contrasenaRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/contrasenaLOGIN"
-                android:inputType="numberPassword">
+                android:inputType="numberPassword"
+                android:text="@string/contrasenaLOGIN">
+
             </com.google.android.material.textfield.TextInputEditText>
+
         </com.google.android.material.textfield.TextInputLayout>
+
+        <!--
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/montoDeCuenta"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/confirmarContrasenaRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/confirmarContrasenaRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingrese el monto que tiene en su cuenta"
-                android:inputType="numberDecimal">
+                android:inputType="numberDecimal"
+                android:text="Ingrese el monto que tiene en su cuenta">
+
+
             </com.google.android.material.textfield.TextInputEditText>
+
         </com.google.android.material.textfield.TextInputLayout>
+        -->
+
         <Button
             android:id="@+id/continuarRegistro"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="50dp"
             android:backgroundTint="@color/celeste"
-            android:text="Contnuar"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="@string/continuar"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/montoDeCuenta"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="70dp">
-        </Button>
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

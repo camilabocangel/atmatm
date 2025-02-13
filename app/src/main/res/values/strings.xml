@@ -7,4 +7,22 @@
     <string name="botonLOGIN">LOGIN</string>\
     <string name="noCuentaLOGIN">¿No tienes cuenta?</string>
     <string name="crearCuentaLOGIN">Crear cuenta</string>
+    <string name="establezca_un_monto">Establezca un monto</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="ingrese_otro_monto">Ingrese otro monto:</string>
+    <string name="_200_bs">200 Bs</string>
+    <string name="_100_bs">100 Bs</string>
+    <string name="_50_bs">50 Bs</string>
+    <string name="_20_bs">20 Bs</string>
+    <string name="cu_nto_desea_depositar_en_su_cuenta">¿Cuánto desea depositar en su cuenta?</string>
+    <string name="cu_nto_desea_retirar_en_su_cuenta">¿Cuánto dinero desea retirar?</string>
+    <string name="monto">Monto:</string>
+    <string name="continuar">Continuar</string>
+    <string name="hola">Hola</string>
+    <string name="imagen_de_dinero">Imagen de dinero</string>
+    <string name="saldo_actual">Saldo actual:</string>
+    <string name="_00_00">00.00</string>
+    <string name="qu_desea_realizar">¿Qué desea realizar?</string>
+    <string name="deposito">DEPOSITO</string>
+    <string name="retiro">RETIRO</string>
 </resources>
