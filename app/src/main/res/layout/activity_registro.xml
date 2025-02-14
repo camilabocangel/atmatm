@@ -6,103 +6,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registro">
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/registro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:id="@+id/registro">
         <TextView
             android:id="@+id/crearCuentaRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="@string/crea_tu_cuenta"
+            android:text="CREA TU CUENTA"
             android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="@id/registro"
+            app:layout_constraintTop_toTopOf="@id/registro"
+            android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintTop_toTopOf="@id/registro"/>
+            app:layout_constraintEnd_toEndOf="@id/registro">
+        </TextView>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nombreRegistro"
+            android:id="@+id/emailRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            app:layout_constraintEnd_toEndOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/crearCuentaRegistro"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintTop_toBottomOf="@id/crearCuentaRegistro">
-
+            app:layout_constraintEnd_toEndOf="@id/registro"
+            android:layout_marginTop="80dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nombreText"
+                android:id="@+id/correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/nombre">
-
+                android:hint="@string/emailLOGIN"
+                android:inputType="textEmailAddress">
             </com.google.android.material.textfield.TextInputEditText>
-
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenaRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/emailRegistro"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintTop_toBottomOf="@id/nombreRegistro">
-
+            app:layout_constraintEnd_toEndOf="@id/registro"
+            android:layout_marginTop="20dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/contrasenaText"
+                android:id="@+id/pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberPassword"
-                android:hint="@string/contrasenaLOGIN">
+                android:hint="@string/contrasenaLOGIN"
+                android:inputType="numberPassword">
             </com.google.android.material.textfield.TextInputEditText>
-
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirmarContrasenaRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/contrasenaRegistro"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintTop_toBottomOf="@id/contrasenaRegistro">
-
+            app:layout_constraintEnd_toEndOf="@id/registro"
+            android:layout_marginTop="20dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/confirmarContrasenaText"
+                android:id="@+id/confirmarpin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberPassword"
-                android:hint="@string/confirmar_contrase_a">
-
+                android:hint="@string/contrasenaLOGIN"
+                android:inputType="numberPassword">
             </com.google.android.material.textfield.TextInputEditText>
-
         </com.google.android.material.textfield.TextInputLayout>
-
-        <!--
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/montoDeCuenta"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/confirmarContrasenaRegistro"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintTop_toBottomOf="@id/confirmarContrasenaRegistro">
-
+            app:layout_constraintEnd_toEndOf="@id/registro"
+            android:layout_marginTop="20dp">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ingresarmonto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:text="Ingrese el monto que tiene en su cuenta">
-
-
+                android:hint="Ingrese el monto que tiene en su cuenta"
+                android:inputType="numberDecimal">
             </com.google.android.material.textfield.TextInputEditText>
-
         </com.google.android.material.textfield.TextInputLayout>
-        -->
-
         <Button
             android:id="@+id/continuarRegistro"
             android:layout_width="wrap_content"
