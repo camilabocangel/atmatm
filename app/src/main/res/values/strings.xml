@@ -25,4 +25,7 @@
     <string name="qu_desea_realizar">¿Qué desea realizar?</string>
     <string name="deposito">DEPOSITO</string>
     <string name="retiro">RETIRO</string>
+    <string name="crea_tu_cuenta">CREA TU CUENTA</string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña</string>
+    <string name="nombre">Nombre</string>
 </resources>

@@ -12,4 +12,10 @@ interface UserDao {
 
     @Update
     suspend fun update(user: User)
+
+    @Insert
+    suspend fun insert(user: User): Long
+
+    @Query("SELECT * FROM User WHERE lastUser = 1")
+    suspend fun getLastUser(): User?
 }

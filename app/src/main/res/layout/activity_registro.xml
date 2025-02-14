@@ -17,14 +17,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="CREA TU CUENTA"
+            android:text="@string/crea_tu_cuenta"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="@id/registro"
             app:layout_constraintStart_toStartOf="@id/registro"
             app:layout_constraintTop_toTopOf="@id/registro"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailRegistro"
+            android:id="@+id/nombreRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
@@ -33,10 +33,10 @@
             app:layout_constraintTop_toBottomOf="@id/crearCuentaRegistro">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombreText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:text="@string/emailLOGIN">
+                android:hint="@string/nombre">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -49,13 +49,14 @@
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintTop_toBottomOf="@id/emailRegistro">
+            app:layout_constraintTop_toBottomOf="@id/nombreRegistro">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contrasenaText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberPassword"
-                android:text="@string/contrasenaLOGIN">
+                android:hint="@string/contrasenaLOGIN">
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,10 +71,11 @@
             app:layout_constraintTop_toBottomOf="@id/contrasenaRegistro">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmarContrasenaText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberPassword"
-                android:text="@string/contrasenaLOGIN">
+                android:hint="@string/confirmar_contrase_a">
 
             </com.google.android.material.textfield.TextInputEditText>
 
