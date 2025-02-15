@@ -39,13 +39,6 @@
             app:layout_constraintStart_toStartOf="@id/login"
             app:layout_constraintEnd_toEndOf="@id/login"
             android:layout_marginTop="200dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editcorreo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/emailLOGIN"
-                android:inputType="textEmailAddress">
-            </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenaLogin"
