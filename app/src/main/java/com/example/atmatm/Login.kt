@@ -28,25 +28,18 @@ class Login : AppCompatActivity() {
         setContentView(binding.root)
 
         val sharedPreferences = getSharedPreferences("ATM_PREFS", Context.MODE_PRIVATE)
+        val savedPin = sharedPreferences.getString("PIN", null)
 
         binding.botonLogin.setOnClickListener {
-            val email = binding.editcorreo.text.toString().trim()
             val pin = binding.editpin.text.toString().trim()
 
-            val savedEmail = sharedPreferences.getString("EMAIL", null)
-            val savedPin = sharedPreferences.getString("PIN", null)
-
-            if (email.isEmpty() || pin.isEmpty()) {
-                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            if (email == savedEmail && pin == savedPin) {
-                val intentHome = Intent(this, Home::class.java)
-                startActivity(intentHome)
+            if (savedPin.isNullOrEmpty()) {
+                Toast.makeText(this, "No hay un PIN registrado. Cree una cuenta.", Toast.LENGTH_SHORT).show()
+            } else if (pin == savedPin) {
+                startActivity(Intent(this, Home::class.java))
                 finish()
             } else {
-                Toast.makeText(this, "Correo o PIN incorrectos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "PIN incorrecto", Toast.LENGTH_SHORT).show()
             }
         dbAccess = getDatabase(this)
 
@@ -71,8 +64,7 @@ class Login : AppCompatActivity() {
 
     private fun cambiarARegistro() {
         binding.crearCuenta.setOnClickListener {
-            val intentRegistro = Intent(this, Registro::class.java)
-            startActivity(intentRegistro)
+            startActivity(Intent(this, Registro::class.java))
         }
     }
 
