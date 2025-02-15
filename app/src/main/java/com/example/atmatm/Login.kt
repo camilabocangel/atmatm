@@ -34,14 +34,19 @@ class Login : AppCompatActivity() {
             val pin = binding.editpin.text.toString().trim()
 
             if (savedPin.isNullOrEmpty()) {
-                Toast.makeText(this, "No hay un PIN registrado. Cree una cuenta.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "No hay un PIN registrado. Cree una cuenta.",
+                    Toast.LENGTH_SHORT
+                ).show()
             } else if (pin == savedPin) {
                 startActivity(Intent(this, Home::class.java))
                 finish()
             } else {
                 Toast.makeText(this, "PIN incorrecto", Toast.LENGTH_SHORT).show()
             }
-        dbAccess = getDatabase(this)
+            dbAccess = getDatabase(this)
+        }
 
         iniciarSesion()
 
@@ -53,7 +58,7 @@ class Login : AppCompatActivity() {
         if (idUser != null) {
             lifecycleScope.launch {
                 val user = dbAccess.userDao().getUserById(idUser)
-                if(user.password != binding.contrasenaLogin.toString().toInt()) {
+                if (user.password != binding.contrasenaLogin.toString().toInt()) {
                     Toast.makeText(this@Login, "Contraseña incorrecta", Toast.LENGTH_SHORT).show()
                 } else {
                     cambiarAHome()

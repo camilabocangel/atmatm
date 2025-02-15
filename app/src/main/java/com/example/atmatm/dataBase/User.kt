@@ -10,5 +10,5 @@ data class User(
     var nombre: String,
     var password: Int? = null,
     var saldo: Double = 0.0,
-    var lastUser: Boolean
+    val numeroTarjeta: Int
 )
