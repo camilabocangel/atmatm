@@ -39,12 +39,6 @@
             app:layout_constraintStart_toStartOf="@id/login"
             app:layout_constraintEnd_toEndOf="@id/login"
             android:layout_marginTop="200dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/emailLOGIN"
-                android:inputType="textEmailAddress">
-            </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenaLogin"
@@ -55,9 +49,10 @@
             app:layout_constraintEnd_toEndOf="@id/login"
             android:layout_marginTop="20dp">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editpin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/contrasenaLOGIN"
+                android:hint="@string/contrasenaLOGIN"
                 android:inputType="numberPassword">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>

@@ -38,6 +38,7 @@ class Deposito : AppCompatActivity() {
                 aumentarSaldo(binding.editMonto.text.toString().toInt())
             }
         }
+
         binding.veinteDeposito.setOnClickListener {
             aumentarSaldo(20)
         }
