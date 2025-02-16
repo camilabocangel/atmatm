@@ -27,6 +27,13 @@ class Retiro : AppCompatActivity() {
 
         completarDatos()
         retirar()
+        volver()
+    }
+
+    private fun volver() {
+        binding.volver.setOnClickListener {
+            cambiarAHome()
+        }
     }
 
     private fun completarDatos() {

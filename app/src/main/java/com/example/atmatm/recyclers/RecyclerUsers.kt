@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.atmatm.Home
+import com.example.atmatm.Login
+import com.example.atmatm.Login.Companion.ID_USER_LOG_IN
 import com.example.atmatm.dataBase.User
 import com.example.atmatm.databinding.CreditCardBinding
 
@@ -37,9 +39,9 @@ class RecyclerUsers : RecyclerView.Adapter<RecyclerUsers.UserViewHolder>() {
             binding.nombreUsuario.text = nombre
 
             binding.tarjeta.setOnClickListener{
-                val home = Intent(context, Home::class.java)
-                home.putExtra(Home.ID_USER_HOME, user.id.toString())
-                context?.startActivity(home)
+                val intentLogIn = Intent(context, Login::class.java)
+                intentLogIn.putExtra(ID_USER_LOG_IN, user.id.toString())
+                context?.startActivity(intentLogIn)
             }
         }
     }

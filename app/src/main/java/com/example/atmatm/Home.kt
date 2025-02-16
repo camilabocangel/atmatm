@@ -29,7 +29,19 @@ class Home : AppCompatActivity() {
         cambiarARetiro()
         cambiarADeposito()
         setData()
+        salir()
+    }
 
+    private fun salir() {
+        binding.salir.setOnClickListener{
+            cambiarACreditCards()
+        }
+    }
+
+    private fun cambiarACreditCards() {
+        val intentCreditCards = Intent (this, CreditCards::class.java)
+        intentCreditCards.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intentCreditCards)
     }
 
     private fun cambiarARetiro() {
@@ -54,7 +66,7 @@ class Home : AppCompatActivity() {
         if (idUser != null) {
             lifecycleScope.launch {
                 val user = dbAccess.userDao().getUserById(idUser)
-                val nombre = "${binding.holaHome.text} ${user.nombre}"
+                val nombre = "Hola ${user.nombre}"
                 binding.holaHome.text = nombre
                 val saldo = "${user.saldo} Bs."
                 binding.saldo.text = saldo

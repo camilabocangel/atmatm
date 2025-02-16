@@ -8,16 +8,43 @@
     tools:context=".CreditCards">
 
     <TextView
-        android:id="@+id/header_title"
-        android:layout_width="0dp"
+        android:id="@+id/noTienesCuenta"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Selecciona tarjeta"
-        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:text="@string/noCuentaLOGIN"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/crearCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/crearCuentaLOGIN"
+        android:textColor="@color/celeste"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noTienesCuenta" />
+
+    <TextView
+        android:id="@+id/seleccionaTarjeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/verdeClaro"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Selecciona tarjeta"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/crearCuenta" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerUsers"
@@ -28,6 +55,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_title" />
+        app:layout_constraintTop_toBottomOf="@id/seleccionaTarjeta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

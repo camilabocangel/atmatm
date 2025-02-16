@@ -27,6 +27,13 @@ class Deposito : AppCompatActivity() {
         dbAccess = getDatabase(this)
 
         depositar()
+        volver()
+    }
+
+    private fun volver() {
+        binding.volver.setOnClickListener {
+            cambiarAHome()
+        }
     }
 
     private fun depositar() {

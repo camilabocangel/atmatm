@@ -6,99 +6,121 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registro">
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/registro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/registro">
+        android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/crearCuentaRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CREA TU CUENTA"
-            android:textSize="40sp"
-            app:layout_constraintTop_toTopOf="@id/registro"
             android:layout_marginTop="50dp"
+            android:text="CREA TU CUENTA"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="@id/registro"
             app:layout_constraintStart_toStartOf="@id/registro"
-            app:layout_constraintEnd_toEndOf="@id/registro">
-        </TextView>
+            app:layout_constraintTop_toTopOf="@id/registro" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/crearCuentaRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="80dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="80dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/crearCuentaRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/emailLOGIN"
-                android:inputType="textEmailAddress">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenaRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/emailRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/emailRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/contrasenaLOGIN"
-                android:inputType="numberPassword">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:hint="@string/pin"
+                android:inputType="numberSigned"
+                android:maxLength="4" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirmarContrasenaRegistro"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/contrasenaRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/contrasenaRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirmarpin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/contrasenaLOGIN"
-                android:inputType="numberPassword">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:hint="@string/confrimar_pin"
+                android:inputType="numberSigned"
+                android:maxLength="4" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/montoDeCuenta"
+            android:id="@+id/nombreDeUsuario"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/confirmarContrasenaRegistro"
-            app:layout_constraintStart_toStartOf="@id/registro"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/registro"
-            android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="@id/registro"
+            app:layout_constraintTop_toBottomOf="@id/confirmarContrasenaRegistro">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ingresarmonto"
+                android:id="@+id/nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ingrese el monto que tiene en su cuenta"
-                android:inputType="numberDecimal">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:hint="@string/ingrese_su_nombre"
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/continuarRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="50dp"
+            android:layout_margin="30dp"
             android:backgroundTint="@color/celeste"
             android:paddingStart="25dp"
             android:paddingEnd="25dp"
             android:text="@string/continuar"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/volver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:backgroundTint="@color/celeste"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="Regresar"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

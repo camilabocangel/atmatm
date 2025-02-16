@@ -1,10 +1,8 @@
 package com.example.atmatm
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.atmatm.dataBase.AppDataBase
@@ -27,6 +25,13 @@ class CreditCards : AppCompatActivity() {
         dbAccess = getDatabase(this)
 
         setUpRecyclerView()
+        cambiarARegistro()
+    }
+
+    private fun cambiarARegistro() {
+        binding.crearCuenta.setOnClickListener {
+            startActivity(Intent(this, Registro::class.java))
+        }
     }
 
     private fun setUpRecyclerView() {
