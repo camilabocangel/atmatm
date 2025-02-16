@@ -42,6 +42,19 @@ android {
 
 dependencies {
 
+    // JUnit for unit tests
+    testImplementation("junit:junit:4.13.2")
+
+    // Mockito for mocking
+    testImplementation("org.mockito:mockito-core:4.6.1")
+
+    // AndroidX Test - JUnit extensions (for UI tests)
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+
+    // Espresso (for UI testing)
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
