@@ -14,8 +14,9 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/tarjeta"
         android:layout_width="0dp"
-        android:layout_height="125dp"
+        android:layout_height="150dp"
         app:cardCornerRadius="25dp"
+        android:layout_margin="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/blank1">
@@ -32,7 +33,7 @@
                 android:elevation="2dp"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="0000000000000000000"
+                android:text="@string/numero_tarjeta"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +46,7 @@
                 android:elevation="2dp"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="Nombre Apellido"
+                android:text="@string/nombre_y_apellido"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/numero_tarjeta" />

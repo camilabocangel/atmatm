@@ -24,23 +24,19 @@ class CreditCards : AppCompatActivity() {
 
         dbAccess = getDatabase(this)
 
-
+        setUpRecyclerView()
         cambiarARegistro()
-        binding.tarjeta1.setOnClickListener {
-            val intentHome = Intent (this, Home::class.java)
-            startActivity(intentHome)
-        }
-        binding.tarjeta2.setOnClickListener {
-            val intentHome = Intent (this, Home::class.java)
-            startActivity(intentHome)
-        }
-        binding.tarjeta3.setOnClickListener {
-            val intentHome = Intent (this, Home::class.java)
-            startActivity(intentHome)
-        }
-        binding.tarjeta3.setOnClickListener {
-            val intentHome = Intent (this, Home::class.java)
-            startActivity(intentHome)
+    }
+
+    private fun setUpRecyclerView() {
+        lifecycleScope.launch {
+            val list = dbAccess.userDao().getEveryUser().toMutableList()
+            recyclerUsers.addDataToList(list)
+
+            binding.recyclerUsers.apply {
+                layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+                adapter = recyclerUsers
+            }
         }
     }
 
@@ -49,6 +45,4 @@ class CreditCards : AppCompatActivity() {
             startActivity(Intent(this, Registro::class.java))
         }
     }
-
-
 }

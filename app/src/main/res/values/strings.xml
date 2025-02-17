@@ -32,4 +32,7 @@
     <string name="confirmar_contrasena">Confirmar contraseña</string>
     <string name="confrimar_pin">Confrimar PIN</string>
     <string name="pin">PIN</string>
+    <string name="selecciona_una_tarjeta">Selecciona una tarjeta</string>
+    <string name="numero_tarjeta">00000000</string>
+    <string name="nombre_y_apellido">Nombre y Apellido</string>
 </resources>

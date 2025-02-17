@@ -14,24 +14,16 @@
         android:background="@drawable/fondo_login">
 
         <TextView
-            android:id="@+id/holaLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/holaLOGIN"
-            android:textSize="50sp"
-            app:layout_constraintStart_toStartOf="@id/login"
-            app:layout_constraintTop_toTopOf="@id/login"/>
-
-        <TextView
             android:id="@+id/bienvenidoLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bienvenidoLOGIN"
             android:textSize="50sp"
-            app:layout_constraintStart_toStartOf="@id/holaLogin"
-            app:layout_constraintTop_toBottomOf="@id/holaLogin"/>
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/login" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLogin"
@@ -40,7 +32,7 @@
             android:layout_marginTop="200dp"
             app:layout_constraintEnd_toEndOf="@id/login"
             app:layout_constraintStart_toStartOf="@id/login"
-            app:layout_constraintTop_toBottomOf="@id/bienvenidoLogin"/>
+            app:layout_constraintTop_toBottomOf="@id/bienvenidoLogin" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenaLogin"
@@ -56,8 +48,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/contrasenaLOGIN"
+                android:inputType="numberPassword"
                 android:maxLength="4"
-                android:inputType="numberPassword"/>
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -67,11 +60,11 @@
             android:layout_marginTop="70dp"
             android:backgroundTint="@color/celeste"
             android:text="@string/botonLOGIN"
-            android:textSize="20sp"
             android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/contrasenaLogin"/>
+            app:layout_constraintTop_toTopOf="@id/contrasenaLogin" />
 
         <Button
             android:id="@+id/volver"

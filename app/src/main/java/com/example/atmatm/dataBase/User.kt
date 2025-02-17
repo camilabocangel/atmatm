@@ -11,5 +11,6 @@ data class User(
     val email: String,
     var pin: Int? = null,
     var saldo: Double = 0.0,
-    val numeroTarjeta: Int
+    val numeroTarjeta: Int,
+    val color: Int
 )

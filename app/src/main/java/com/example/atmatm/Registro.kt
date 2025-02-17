@@ -63,7 +63,8 @@ class Registro : AppCompatActivity() {
                 email = email,
                 pin = pin.toInt(),
                 nombre = nombre,
-                numeroTarjeta = (40000000..99999999).random()
+                numeroTarjeta = (40000000..99999999).random(),
+                color = (0..3).random()
             )
             lifecycleScope.launch {
                 dbAccess.userDao().insert(user)

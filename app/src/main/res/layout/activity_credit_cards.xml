@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/noTienesCuenta"
             android:layout_width="wrap_content"
@@ -42,235 +43,24 @@
             android:background="@color/black"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Selecciona tarjeta"
+            android:text="@string/selecciona_una_tarjeta"
             android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/crearCuenta" />
 
-        <ScrollView
-            android:layout_width="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerUsers"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:padding="16dp"
-            app:layout_constraintTop_toBottomOf="@id/seleccionaTarjeta"
-            android:layout_marginTop="30dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/tarjeta1"
-                    android:layout_width="340dp"
-                    android:layout_height="190dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="8dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginEnd="16dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seleccionaTarjeta" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cardBisa"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_bisa">
 
-                        <TextView
-                            android:id="@+id/bancoBisa"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="BISA"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                        <TextView
-                            android:id="@+id/numeroSerie"
-                            android:text="000000000"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toBottomOf="@id/bancoBisa"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="20dp">
-                        </TextView>
-                        <TextView
-                            android:id="@+id/nombreBisa"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nombre"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toBottomOf="@id/numeroSerie"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/tarjeta2"
-                    android:layout_width="340dp"
-                    android:layout_height="190dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="8dp"
-                    app:layout_constraintTop_toBottomOf="@id/tarjeta1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cardUnion"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_union">
-
-                        <TextView
-                            android:id="@+id/bancoUnion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Banco Union"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                        <TextView
-                            android:id="@+id/numeroSerie2"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textColor="@color/white"
-                            android:text="0000000000"
-                            app:layout_constraintTop_toBottomOf="@id/bancoUnion"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="20dp">
-                        </TextView>
-                        <TextView
-                            android:id="@+id/nombreUnion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nombre"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toBottomOf="@id/numeroSerie2"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/tarjeta3"
-                    android:layout_width="340dp"
-                    android:layout_height="190dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="8dp"
-                    app:layout_constraintTop_toBottomOf="@id/tarjeta2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cardBNB"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_bnb">
-
-                        <TextView
-                            android:id="@+id/BNB"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="BNB"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                        <TextView
-                            android:id="@+id/numeroSerie3"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textColor="@color/white"
-                            android:text="0000000000"
-                            app:layout_constraintTop_toBottomOf="@id/BNB"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="20dp">
-                        </TextView>
-                        <TextView
-                            android:id="@+id/nombreBNB"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nombre"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toBottomOf="@id/numeroSerie3"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/tarjeta4"
-                    android:layout_width="340dp"
-                    android:layout_height="190dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="8dp"
-                    app:layout_constraintTop_toBottomOf="@id/tarjeta3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cardMercantil"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_mercantil">
-
-                        <TextView
-                            android:id="@+id/mercantil"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mercantil"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                        <TextView
-                            android:id="@+id/numeroSerie4"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textColor="@color/white"
-                            android:text="0000000000"
-                            app:layout_constraintTop_toBottomOf="@id/mercantil"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="20dp">
-                        </TextView>
-                        <TextView
-                            android:id="@+id/nombreMerc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nombre"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintTop_toBottomOf="@id/numeroSerie4"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginStart="10dp"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
