@@ -31,7 +31,7 @@ class Deposito : AppCompatActivity() {
     }
 
     private fun volver() {
-        binding.volver.setOnClickListener {
+        binding.volverdepo.setOnClickListener {
             cambiarAHome()
         }
     }
