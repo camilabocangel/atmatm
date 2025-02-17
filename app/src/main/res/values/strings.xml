@@ -23,7 +23,7 @@
     <string name="saldo_actual">Saldo actual:</string>
     <string name="_00_00">00.00</string>
     <string name="qu_desea_realizar">¿Qué desea realizar?</string>
-    <string name="deposito">DEPOSITO</string>
+    <string name="deposito">DEPÓSITO</string>
     <string name="retiro">RETIRO</string>
     <string name="crea_tu_cuenta">CREA TU CUENTA</string>
     <string name="confirmar_contrase_a">Confirmar Contraseña</string>
