@@ -34,6 +34,7 @@
                 android:gravity="center"
                 android:maxLines="2"
                 android:text="@string/numero_tarjeta"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -47,6 +48,7 @@
                 android:gravity="center"
                 android:maxLines="2"
                 android:text="@string/nombre_y_apellido"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/numero_tarjeta" />
