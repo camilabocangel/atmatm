@@ -16,6 +16,6 @@ interface UserDao {
     @Insert
     suspend fun insert(user: User): Long
 
-    @Query("SELECT * FROM User WHERE lastUser = 1")
-    suspend fun getLastUser(): User?
+    @Query("SELECT * FROM User")
+    suspend fun getEveryUser(): List<User>
 }

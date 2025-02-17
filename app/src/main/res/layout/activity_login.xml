@@ -6,93 +6,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/login"
         android:background="@drawable/fondo_login">
+
         <TextView
             android:id="@+id/holaLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
             android:text="@string/holaLOGIN"
             android:textSize="50sp"
-            app:layout_constraintTop_toTopOf="@id/login"
-            android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="@id/login"
-            android:layout_marginStart="30dp">
-        </TextView>
+            app:layout_constraintTop_toTopOf="@id/login"/>
+
         <TextView
             android:id="@+id/bienvenidoLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bienvenidoLOGIN"
             android:textSize="50sp"
-            app:layout_constraintTop_toBottomOf="@id/holaLogin"
-            app:layout_constraintStart_toStartOf="@id/holaLogin">
-        </TextView>
+            app:layout_constraintStart_toStartOf="@id/holaLogin"
+            app:layout_constraintTop_toBottomOf="@id/holaLogin"/>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLogin"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/bienvenidoLogin"
-            app:layout_constraintStart_toStartOf="@id/login"
+            android:layout_marginTop="200dp"
             app:layout_constraintEnd_toEndOf="@id/login"
-            android:layout_marginTop="200dp">
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintStart_toStartOf="@id/login"
+            app:layout_constraintTop_toBottomOf="@id/bienvenidoLogin"/>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenaLogin"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/emailLogin"
-            app:layout_constraintStart_toStartOf="@id/login"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/login"
-            android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="@id/login"
+            app:layout_constraintTop_toBottomOf="@id/emailLogin">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editpin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/contrasenaLOGIN"
-                android:inputType="numberPassword">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:maxLength="4"
+                android:inputType="numberPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/botonLogin"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
             android:backgroundTint="@color/celeste"
             android:text="@string/botonLOGIN"
+            android:textSize="20sp"
             android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="@id/contrasenaLogin"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="70dp">
-        </Button>
-        <TextView
-            android:id="@+id/noTienesCuenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/contrasenaLogin"/>
+
+        <Button
+            android:id="@+id/volver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/noCuentaLOGIN"
-            android:textSize="14sp"
+            android:layout_margin="30dp"
+            android:backgroundTint="@color/celeste"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="Regresar"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/botonLogin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="50dp">
-        </TextView>
-        <TextView
-            android:id="@+id/crearCuenta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/crearCuentaLOGIN"
-            android:textSize="14sp"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="@color/celeste"
-            app:layout_constraintTop_toBottomOf="@id/noTienesCuenta"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp">
-        </TextView>
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

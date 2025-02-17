@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ATMATM"
         tools:targetApi="31">
         <activity
-            android:name=".Registro"
+            android:name=".CreditCards"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,23 +21,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+
         <activity
             android:name=".Login"
-            android:exported="false"/>
+            android:exported="false" />
+
         <activity
             android:name=".Retiro"
             android:exported="false" />
+
         <activity
             android:name=".Deposito"
             android:exported="false" />
+
         <activity
             android:name=".Home"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
-            android:exported="false">
+            android:exported="false" />
 
-        </activity>
     </application>
 
 </manifest>
